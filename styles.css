@@ -1,0 +1,161 @@
+/* --- Configuración General --- */
+:root {
+  --primario: #4a90e2;
+  --secundario: #f5f7fa;
+  --texto: #333;
+  --peligro: #e74c3c;
+  --tecnologia: #2ecc71;
+  --ciencia: #9b59b6;
+  --arte: #f1c40f;
+  --blanco: #ffffff;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--secundario);
+  color: var(--texto);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --- Sección de Controles (Formulario) --- */
+#controles {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#btn-agregar {
+  background-color: var(--primario);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn-agregar:hover {
+  background-color: #357abd;
+}
+
+/* --- Filtros --- */
+#filtros {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-filtro {
+  margin: 0 5px;
+  cursor: pointer;
+  background: #e0e0e0;
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn-filtro.activo {
+  background-color: var(--primario);
+  color: white;
+}
+
+/* --- Galería y Tarjetas --- */
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.tarjeta {
+  background: var(--blanco);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #eee;
+}
+
+/* Colores por categoría */
+.categoria-tecnologia {
+  border-left-color: var(--tecnologia);
+}
+.categoria-ciencia {
+  border-left-color: var(--ciencia);
+}
+.categoria-arte {
+  border-left-color: var(--arte);
+}
+
+.btn-eliminar {
+  background: transparent;
+  color: var(--peligro);
+  border: 1px solid var(--peligro);
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: var(--peligro);
+  color: white;
+}
+
+/* --- Estados y Utilidades --- */
+.oculta {
+  display: none;
+}
+
+#contador {
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+}
+
+.mensaje-vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+}
